@@ -1,18 +1,496 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#211d24" />
+        <meta
+            name="description"
+            content="Learn HTML horizontal dividers, the hr element, CSS borders, margins and padding with interactive examples."
+        />
+        <title>005 Linework — HTML & CSS Lesson</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Project</title>
-</head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
 
-<body>
-    start
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <header class="site-header">
+            <a class="brand" href="./index.html" aria-label="Linework home">
+                <span class="brand-icon">L<span>.</span></span>
+                <span>LINE<span class="brand-muted">WORK</span></span>
+            </a>
 
-    <script src="./assets/js/main.js"></script>
-</body>
+            <div class="header-center">
+                <span class="live-dot"></span>
+                <span>FRONTEND FIELD NOTES</span>
+            </div>
 
+            <a
+                class="roadmap-link"
+                href="https://freetimezp.github.io/roadmap-web-coding/"
+            >
+                ROADMAP <span aria-hidden="true">↗</span>
+            </a>
+        </header>
+
+        <main>
+            <section class="hero wrap">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span>LESSON 005</span> / HTML + CSS</p>
+                    <h1>Give your<br />content <em>room.</em></h1>
+                    <p class="hero-description">
+                        The smallest details can bring a layout together. Learn
+                        to separate ideas, define edges, and control the space
+                        between every element.
+                    </p>
+
+                    <div class="hero-bottom">
+                        <a class="hero-cta" href="#playground">
+                            EXPLORE THE PLAYGROUND
+                            <span aria-hidden="true">↓</span>
+                        </a>
+                        <span class="reading-time">5 MIN READ</span>
+                    </div>
+                </div>
+
+                <div
+                    class="hero-art"
+                    aria-label="Abstract composition of horizontal lines"
+                >
+                    <div class="art-label art-label-top">COMPOSITION / 005</div>
+                    <div class="art-letter">L<span>.</span></div>
+                    <div class="art-rule art-rule-one"></div>
+                    <div class="art-rule art-rule-two"></div>
+                    <div class="art-rule art-rule-three"></div>
+                    <div class="art-square"></div>
+
+                    <div class="art-label art-label-bottom">
+                        SPACE IS PART OF THE DESIGN.
+                    </div>
+                </div>
+            </section>
+
+            <section class="concept-strip">
+                <div class="wrap concept-inner">
+                    <span class="concept-label">TODAY'S TOOLKIT</span>
+                    <span><code>&lt;hr&gt;</code> Thematic break</span>
+                    <span><code>border</code> Visual edge</span>
+                    <span><code>margin</code> Outer space</span>
+                    <span><code>padding</code> Inner space</span>
+                </div>
+            </section>
+
+            <section class="lesson-section wrap" id="basics">
+                <div class="section-heading">
+                    <p class="eyebrow">01 / UNDERSTAND THE ELEMENT</p>
+                    <h2>One line.<br /><em>New direction.</em></h2>
+                </div>
+
+                <div class="lesson-grid">
+                    <article class="lesson-copy">
+                        <p>
+                            The <code>&lt;hr&gt;</code> element marks a thematic
+                            change between sections of content. Think of a new
+                            topic in an article, a scene change in a story, or a
+                            pause between two ideas.
+                        </p>
+                        <p>
+                            You can use CSS to change its appearance: the line's
+                            color, thickness, style, and the space around it.
+                        </p>
+                        <div class="tip-card">
+                            <span class="tip-symbol">✳</span>
+                            <p>
+                                <strong>Remember:</strong> use
+                                <code>&lt;hr&gt;</code> when the content has a
+                                meaningful break. Use borders when you simply
+                                need a decorative edge or divider.
+                            </p>
+                        </div>
+                    </article>
+
+                    <div class="article-preview">
+                        <div class="preview-top">
+                            <span>FIELD NOTES / 01</span>
+                            <span>THE EDITORIAL</span>
+                        </div>
+                        <h3>First, the thought.</h3>
+
+                        <p>
+                            Every page begins with an idea. Good typography
+                            helps the reader find its rhythm, follow the story,
+                            and understand what matters.
+                        </p>
+                        <hr class="example-hr" />
+
+                        <h3>Then, a new chapter.</h3>
+                        <p>
+                            A well-placed divider signals that the conversation
+                            is moving somewhere new. It doesn't need to shout to
+                            be noticed.
+                        </p>
+                        <div class="preview-bottom">
+                            END OF EXAMPLE <span>→</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="playground-section" id="playground">
+                <div class="wrap playground-wrap">
+                    <div class="section-heading light-heading">
+                        <p class="eyebrow">02 / EXPERIMENT</p>
+                        <h2>Make the line<br /><em>your own.</em></h2>
+                        <p class="section-description">
+                            Change the controls. Watch the divider update. Copy
+                            the CSS and use it in your own project.
+                        </p>
+                    </div>
+
+                    <div class="playground-grid">
+                        <div class="controls-panel">
+                            <div class="panel-heading">
+                                <span>DIVIDER STUDIO</span>
+                                <span class="panel-index">05—A</span>
+                            </div>
+
+                            <div class="control-group">
+                                <label for="line-style">01 / LINE STYLE</label>
+                                <div
+                                    class="style-options"
+                                    id="line-style-options"
+                                >
+                                    <button
+                                        class="style-choice active"
+                                        type="button"
+                                        data-style="solid"
+                                        aria-pressed="true"
+                                    >
+                                        <span
+                                            class="style-sample solid-sample"
+                                        ></span>
+                                        <span>Solid</span>
+                                    </button>
+                                    <button
+                                        class="style-choice"
+                                        type="button"
+                                        data-style="dashed"
+                                        aria-pressed="false"
+                                    >
+                                        <span
+                                            class="style-sample dashed-sample"
+                                        ></span>
+                                        <span>Dashed</span>
+                                    </button>
+                                    <button
+                                        class="style-choice"
+                                        type="button"
+                                        data-style="dotted"
+                                        aria-pressed="false"
+                                    >
+                                        <span
+                                            class="style-sample dotted-sample"
+                                        ></span>
+                                        <span>Dotted</span>
+                                    </button>
+                                    <button
+                                        class="style-choice"
+                                        type="button"
+                                        data-style="double"
+                                        aria-pressed="false"
+                                    >
+                                        <span
+                                            class="style-sample double-sample"
+                                        ></span>
+                                        <span>Double</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="range-heading">
+                                    <label for="line-thickness">
+                                        02 / THICKNESS
+                                    </label>
+                                    <output
+                                        id="thickness-value"
+                                        for="line-thickness"
+                                    >
+                                        2px
+                                    </output>
+                                </div>
+                                <input
+                                    id="line-thickness"
+                                    type="range"
+                                    min="1"
+                                    max="10"
+                                    value="2"
+                                />
+                            </div>
+
+                            <div class="control-group">
+                                <div class="range-heading">
+                                    <label for="line-width">
+                                        03 / LINE WIDTH
+                                    </label>
+                                    <output id="width-value" for="line-width">
+                                        100%
+                                    </output>
+                                </div>
+                                <input
+                                    id="line-width"
+                                    type="range"
+                                    min="20"
+                                    max="100"
+                                    step="5"
+                                    value="100"
+                                />
+                            </div>
+
+                            <div class="control-group">
+                                <div class="range-heading">
+                                    <label for="line-spacing">
+                                        04 / VERTICAL SPACE
+                                    </label>
+                                    <output
+                                        id="spacing-value"
+                                        for="line-spacing"
+                                    >
+                                        32px
+                                    </output>
+                                </div>
+                                <input
+                                    id="line-spacing"
+                                    type="range"
+                                    min="8"
+                                    max="72"
+                                    step="4"
+                                    value="32"
+                                />
+                            </div>
+
+                            <div class="control-group">
+                                <label>05 / ACCENT COLOR</label>
+                                <div class="color-options">
+                                    <button
+                                        class="color-choice active"
+                                        type="button"
+                                        data-color="#e88768"
+                                        style="--swatch: #e88768"
+                                        aria-label="Terracotta"
+                                        aria-pressed="true"
+                                    ></button>
+                                    <button
+                                        class="color-choice"
+                                        type="button"
+                                        data-color="#c6b4d9"
+                                        style="--swatch: #c6b4d9"
+                                        aria-label="Lavender"
+                                        aria-pressed="false"
+                                    ></button>
+                                    <button
+                                        class="color-choice"
+                                        type="button"
+                                        data-color="#b8d8b0"
+                                        style="--swatch: #b8d8b0"
+                                        aria-label="Sage green"
+                                        aria-pressed="false"
+                                    ></button>
+                                    <button
+                                        class="color-choice"
+                                        type="button"
+                                        data-color="#f0c969"
+                                        style="--swatch: #f0c969"
+                                        aria-label="Warm yellow"
+                                        aria-pressed="false"
+                                    ></button>
+                                </div>
+                            </div>
+
+                            <button
+                                class="reset-button"
+                                id="reset-controls"
+                                type="button"
+                            >
+                                RESET SETTINGS <span aria-hidden="true">↻</span>
+                            </button>
+                        </div>
+
+                        <div class="preview-panel">
+                            <div class="preview-panel-top">
+                                <span>LIVE PREVIEW</span>
+                                <span class="preview-live"><i></i> LIVE</span>
+                            </div>
+
+                            <div class="live-article">
+                                <span class="article-kicker">
+                                    A NOTE ON DESIGN
+                                </span>
+                                <h3>Less noise.<br /><em>More meaning.</em></h3>
+                                <p>
+                                    A strong layout isn't only about what you
+                                    add. It's also about the pauses that let
+                                    each idea breathe.
+                                </p>
+
+                                <hr id="live-divider" class="live-divider" />
+
+                                <div class="after-divider">
+                                    <span class="after-label">
+                                        THE NEXT IDEA
+                                    </span>
+                                    <p>
+                                        A thoughtful line creates a boundary
+                                        without closing the conversation.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="generated-code">
+                                <div class="generated-code-heading">
+                                    <span>YOUR CSS</span>
+                                    <button id="copy-code" type="button">
+                                        COPY CODE ↗
+                                    </button>
+                                </div>
+                                <pre><code id="generated-css">.divider {border: 0;border-top: 2px solid #e88768;width: 100%;margin-block: 32px;}</code></pre>
+                                <p
+                                    class="copy-status"
+                                    id="copy-status"
+                                    aria-live="polite"
+                                ></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lesson-section wrap" id="spacing">
+                <div class="section-heading">
+                    <p class="eyebrow">03 / UNDERSTAND SPACING</p>
+                    <h2>Outside.<br /><em>Inside.</em></h2>
+                </div>
+
+                <div class="spacing-grid">
+                    <article class="spacing-card">
+                        <span class="mini-index">A / MARGIN</span>
+                        <h3>Space outside.</h3>
+                        <p>
+                            Margin creates distance between an element and its
+                            neighbors.
+                        </p>
+                        <div class="box-diagram margin-diagram">
+                            <span class="diagram-label">OUTER SPACE</span>
+                            <div class="diagram-box">
+                                <span>CONTENT</span>
+                            </div>
+                        </div>
+                        <pre><code>.card {margin: 24px;}</code></pre>
+                    </article>
+
+                    <article class="spacing-card">
+                        <span class="mini-index">B / PADDING</span>
+                        <h3>Space inside.</h3>
+                        <p>
+                            Padding creates breathing room between content and
+                            its border.
+                        </p>
+                        <div class="box-diagram padding-diagram">
+                            <div class="diagram-box">
+                                <span>CONTENT</span>
+                            </div>
+                            <span class="diagram-label">INNER SPACE</span>
+                        </div>
+                        <pre><code>.card {padding: 24px;}</code></pre>
+                    </article>
+
+                    <article class="spacing-card">
+                        <span class="mini-index">C / BORDER</span>
+                        <h3>Define the edge.</h3>
+                        <p>
+                            A border draws a visible boundary around an element.
+                        </p>
+                        <div class="box-diagram border-diagram">
+                            <div class="diagram-box">
+                                <span>CONTENT</span>
+                            </div>
+                        </div>
+                        <pre><code>.card {border: 2px solid #e88768;}</code></pre>
+                    </article>
+                </div>
+
+                <div class="spacing-callout">
+                    <div class="callout-mark">!</div>
+                    <p>
+                        <strong>Easy way to remember:</strong>
+                        margin = outside, padding = inside, border = edge. All
+                        three work together to create the box model.
+                    </p>
+                </div>
+            </section>
+
+            <section class="practice-section">
+                <div class="wrap practice-wrap">
+                    <div>
+                        <p class="eyebrow">04 / YOUR TURN</p>
+                        <h2>Try it in<br /><em>your code.</em></h2>
+                        <p>
+                            Create a simple article with two topics. Use a
+                            semantic
+                            <code>&lt;hr&gt;</code> between them, then style its
+                            line and spacing with CSS.
+                        </p>
+                    </div>
+
+                    <div class="practice-code">
+                        <div class="practice-code-top">
+                            <span>HTML + CSS</span>
+                            <span>YOUR FIRST DIVIDER</span>
+                        </div>
+                        <pre><code>&lt;h2&gt;Chapter one&lt;/h2&gt;&lt;p&gt;The first idea begins here.&lt;/p&gt;&lt;hr class="divider"&gt;&lt;h2&gt;Chapter two&lt;/h2&gt;&lt;p&gt;A new idea starts here.&lt;/p&gt;</code></pre>
+                        <hr class="practice-rule" />
+                        <pre><code>.divider {border: 0;border-top: 2px solid #e88768;margin-block: 2rem;}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="wrap next-lesson">
+                <div>
+                    <p class="eyebrow">LESSON 005 COMPLETE?</p>
+                    <h2>Ready for the next detail?</h2>
+                    <p>Practice what you've learned, then test your skills.</p>
+                </div>
+                <div class="next-actions">
+                    <a
+                        class="next-button"
+                        href="https://freetimezp.github.io/skillscheck-005-divider/"
+                    >
+                        TAKE SKILLS CHECK <span aria-hidden="true">↗</span>
+                    </a>
+                    <a
+                        class="text-link"
+                        href="https://freetimezp.github.io/roadmap-web-coding/"
+                    >
+                        Back to roadmap →
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer wrap">
+            <a class="footer-brand" href="./index.html">
+                LINEWORK<span>.</span>
+            </a>
+            <span>LEARN THE RULES. DESIGN THE DETAILS.</span>
+            <span>LESSON 005 / 1000</span>
+        </footer>
+
+        <script src="./assets/js/main.js" defer></script>
+    </body>
 </html>
